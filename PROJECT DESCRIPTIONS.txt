@@ -1,0 +1,51 @@
+Step 1: Create an S3 Bucket
+-----------------------------
+Go to S3: In the AWS Management Console, search for S3 in the "Find Services" box, and click on it.
+Create a Bucket:
+Click on the Create bucket button.
+Choose a unique name for your bucket (the name must be globally unique).
+Select a region where you want your website to be hosted (e.g., US East (N. Virginia)).
+Leave other settings at their defaults unless you need specific configurations.
+Click Create bucket.
+
+Step 2: Upload Your Website Files to S3
+-----------------------------------------
+Open the newly created bucket.
+Click on the Upload button.
+Add your website files (HTML, CSS, JavaScript, images, etc.) from your local computer.
+Make sure your index.html file (or whatever your main page is) is present.
+If you have other assets like images or fonts, upload those as well.
+Click Upload to finish uploading your files.
+
+
+Step 3: Set Bucket Policy for Public Access
+------------------------------------------------
+
+Go to the Permissions tab in your S3 bucket.
+
+Scroll down to Block public access (bucket settings) and click on Edit.
+
+Uncheck Block all public access and acknowledge the warning about public access.
+
+Click Save changes.
+
+This step is essential to allow public access to your website.
+
+
+
+Step 4: Configure S3 for Static Website HostinG
+----------------------------------------------------
+Go to the Properties tab of your S3 bucket.
+Scroll down to Static website hosting.
+Click on Enable.
+Set Index document to index.html (or whatever your main page file is).
+Set Error document to error.html (optional, but helpful for error handling).
+Click Save changes.
+
+
+Step 5: Get the Website URL
+-------------------------------------------------
+After enabling static website hosting, you’ll see a Bucket website endpoint at the bottom of the Static website hosting settings.
+This URL will look like https://personal-webbucketsami.s3.us-east-1.amazonaws.com/portfolio_website.html
+For example: https://personal-webbucketsami.s3.us-east-1.amazonaws.com/portfolio_website.html
+You can now use this URL to access your portfolio website.
